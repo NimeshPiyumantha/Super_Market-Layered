@@ -7,8 +7,9 @@ This is made using full Layered-Architecture.
 * Jasper Report
 * MySql
 ### - Used Layered Architecture.
-#### © 2022  All Right Reserved Design By Nimesh Piyumantha
-#### If you hava any bugs or issues , If you want to explain my code pleace contact me on : nimeshpiyumantha11@gmail.com
+### - © 2022  All Right Reserved Design By Nimesh Piyumantha
+### - If you hava any bugs or issues , If you want to explain my code pleace contact me on : 
+- nimeshpiyumantha11@gmail.com
 
 ## User Login
 ![alt text](https://github.com/NimeshPiyumantha/Super_Market-Layered/blob/main/MVC_Layered/screenShorts/SuperMarket%20(1).png)
