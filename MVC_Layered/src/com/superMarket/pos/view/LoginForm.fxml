@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="context" prefHeight="650.0" prefWidth="1120.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superMarket.pos.controller.LoginFormController">
+    <children>
+        <ImageView fitHeight="601.0" fitWidth="1120.0" layoutY="49.0" pickOnBounds="true">
+            <image>
+                <Image url="@assets/images/login.png" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="49.0" prefWidth="1120.0" style="-fx-background-color: #2f3542;">
+            <children>
+                <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="1068.0" layoutY="12.0" onMouseClicked="#BtnCloseOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/images/close.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="1016.0" layoutY="12.0" onMouseClicked="#BtnRestoreDownOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/images/maximize.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="961.0" layoutY="12.0" onMouseClicked="#BtnMinimizeOnAction" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@assets/images/minimize.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#dd2727" layoutX="311.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super Market" wrappingWidth="242.0537109375">
+                    <font>
+                        <Font name="Bodoni MT Black" size="24.0" />
+                    </font>
+                </Text>
+                <Label layoutX="570.0" layoutY="9.0" text="Point Of Sale System" textFill="#3e6ccf">
+                    <font>
+                        <Font name="Berlin Sans FB Bold" size="21.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Text fill="#dd2727" layoutX="180.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" textAlignment="CENTER" wrappingWidth="283.0537109375">
+            <font>
+                <Font name="Bodoni MT Black" size="36.0" />
+            </font>
+        </Text>
+          <JFXRadioButton fx:id="adminRadBtn" layoutX="218.0" layoutY="446.0" selected="true" text="Admin">
+         <toggleGroup>
+            <ToggleGroup fx:id="member" />
+         </toggleGroup>
+         <font>
+            <Font name="Bauhaus 93" size="17.0" />
+         </font>
+      </JFXRadioButton>
+         <JFXRadioButton fx:id="recRadBtn" layoutX="334.0" layoutY="446.0" text="Reception" toggleGroup="$member">
+         <font>
+            <Font name="Bauhaus 93" size="17.0" />
+         </font></JFXRadioButton>
+          <Button layoutX="358.0" layoutY="499.0" mnemonicParsing="false" onAction="#goToCancelPage" prefHeight="31.0" prefWidth="134.0" style="-fx-background-radius: 5; -fx-background-color: #57606f;" text="Cancle" textFill="WHITE">
+              <font>
+                  <Font name="System Bold" size="18.0" />
+              </font>
+          </Button>
+          <Button layoutX="188.0" layoutY="499.0" mnemonicParsing="false" onAction="#CashierLoginPage" prefHeight="31.0" prefWidth="134.0" style="-fx-background-color: #3867d6; -fx-background-radius: 5;" text="Log In" textFill="WHITE">
+              <font>
+                  <Font name="System Bold" size="18.0" />
+              </font>
+          </Button>
+          <Label alignment="CENTER" layoutX="14.0" layoutY="610.0" prefHeight="26.0" prefWidth="1089.0" text="Copyright 2022 Supermarcket,All Right Reserved Design By Nimesh Piyumantha">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="122.0" layoutY="235.0" prefHeight="81.0" prefWidth="416.0" style="-fx-background-color: #ced6e0; -fx-border-color: #2f3542; -fx-border-radius: 20; -fx-background-radius: 25;">
+         <children>
+                <TextField fx:id="txtUserName" layoutX="71.0" layoutY="21.0" prefHeight="40.0" prefWidth="321.0" promptText="User Name">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font></TextField>
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@assets/images/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="122.0" layoutY="335.0" prefHeight="81.0" prefWidth="416.0" style="-fx-background-color: #ced6e0; -fx-border-color: #2f3542; -fx-background-radius: 25; -fx-border-radius: 20;">
+         <children>
+                <PasswordField fx:id="txtPassword" layoutX="73.0" layoutY="21.0" prefHeight="40.0" prefWidth="321.0" promptText="Password">
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font></PasswordField>
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="14.0" layoutY="21.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@assets/images/padlock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator layoutX="209.0" layoutY="183.0" prefHeight="7.0" prefWidth="242.0" />
+    </children>
+</AnchorPane>

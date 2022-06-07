@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="context" prefHeight="448.0" prefWidth="869.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superMarket.pos.controller.HomePageFormController">
+    <children>
+        <Label layoutX="135.0" layoutY="41.0" text="WELCOME TO SUPER  MARKET" textFill="#140017">
+            <font>
+                <Font name="Copperplate Gothic Bold" size="36.0" />
+            </font>
+        </Label>
+        <JFXProgressBar fx:id="progressBar" layoutX="91.0" layoutY="357.0" prefHeight="17.0" prefWidth="632.0" />
+        <ProgressIndicator fx:id="progressRange" layoutX="746.0" layoutY="355.0" prefHeight="21.0" prefWidth="59.0" progress="0.0" />
+        <Label layoutX="225.0" layoutY="411.0" text="Copyright © 2022 Supermarcket. All Right Reserved Design By Nimesh Piyumantha" />
+      <ImageView fitHeight="225.0" fitWidth="358.0" layoutX="267.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/supmerMarket.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

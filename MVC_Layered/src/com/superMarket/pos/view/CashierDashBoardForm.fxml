@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="CashierDashboard" prefHeight="650.0" prefWidth="1120.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superMarket.pos.controller.CashierDashBoardFormController">
+    <children>
+        <ImageView fx:id="imgOrder" fitHeight="173.0" fitWidth="165.0" layoutX="726.0" layoutY="247.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/images/cargo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imgCustomer" fitHeight="173.0" fitWidth="165.0" layoutX="271.0" layoutY="247.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/images/addcontact.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="lblMenu" alignment="CENTER" layoutX="54.0" layoutY="490.0" prefHeight="32.0" prefWidth="1012.0" text="Welcome" textAlignment="CENTER" textFill="#0cf50d">
+            <font>
+                <Font name="System Bold" size="35.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblDescription" alignment="CENTER" layoutX="54.0" layoutY="541.0" prefHeight="17.0" prefWidth="1012.0" text="Please select one of above main operations to proceed" />
+        <Label alignment="CENTER" layoutX="54.0" layoutY="609.0" prefHeight="16.0" prefWidth="1012.0" text="Copyright © 2022 Supermarcket. All Right Reserved Design By Nimesh Piyumantha" />
+        <Label alignment="CENTER" layoutX="50.0" layoutY="66.0" prefHeight="52.0" prefWidth="1022.0" text="Cashier Dashboard" textFill="#0cf50d">
+            <font>
+                <Font name="Arial Bold" size="45.0" />
+            </font>
+        </Label>
+        <Separator layoutX="106.0" layoutY="130.0" prefHeight="8.0" prefWidth="909.0" />
+      <AnchorPane prefHeight="49.0" prefWidth="1120.0" style="-fx-background-color: #2f3542;">
+         <children>
+            <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="1068.0" layoutY="12.0" onMouseClicked="#BtnCloseOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/close.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="1016.0" layoutY="12.0" onMouseClicked="#BtnRestoreDownOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/maximize.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="27.0" fitWidth="32.0" layoutX="961.0" layoutY="12.0" onMouseClicked="#BtnMinimizeOnAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/minimize.png" />
+               </image>
+            </ImageView>
+            <Text fill="#dd2727" layoutX="311.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Super Market" wrappingWidth="242.0537109375">
+               <font>
+                  <Font name="Bodoni MT Black" size="24.0" />
+               </font>
+            </Text>
+            <Label layoutX="570.0" layoutY="9.0" text="Point Of Sale System" textFill="#3e6ccf">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="59.0" fitWidth="67.0" layoutX="30.0" layoutY="62.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/logOut.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

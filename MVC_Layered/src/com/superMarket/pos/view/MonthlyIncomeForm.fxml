@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MonthlyIncomeContext" prefHeight="481.0" prefWidth="919.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superMarket.pos.controller.MonthlyIncomeFormController">
+    <children>
+        <AreaChart fx:id="MonthlyAreaChart" layoutX="428.0" layoutY="61.0" prefHeight="406.0" prefWidth="477.0">
+            <xAxis>
+                <CategoryAxis side="BOTTOM" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis side="LEFT" />
+            </yAxis>
+        </AreaChart>
+        <TableView fx:id="MonthlyIncomeTbl" layoutX="21.0" layoutY="74.0" prefHeight="380.0" prefWidth="400.0">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Month" />
+                <TableColumn prefWidth="75.0" text="Item Sold Qty" />
+                <TableColumn prefWidth="75.0" text="Order Count" />
+                <TableColumn prefWidth="75.0" text="Month Cost" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Label layoutX="316.0" layoutY="14.0" prefHeight="36.0" prefWidth="233.0" text="Monthly Income ">
+            <font>
+                <Font name="Bell MT Bold" size="30.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

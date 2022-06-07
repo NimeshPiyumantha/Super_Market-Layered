@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainAnchorPane" prefHeight="601.0" prefWidth="1120.0" style="-fx-background-color: white;" stylesheets="@assets/styles/place_order.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superMarket.pos.controller.PlaceOrderFormController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="757.0">
+            <fill>
+                <LinearGradient endX="0.04807692307692308" endY="0.7115384615384616">
+                    <stops>
+                        <Stop color="#1598d6" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Rectangle>
+        <ImageView fitHeight="53.0" fitWidth="56.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@assets/images/right-arrow.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="121.0" layoutY="24.0" text="Place Order Form">
+            <font>
+                <Font name="Garamond Bold" size="35.0" />
+            </font>
+        </Label>
+        <JFXComboBox fx:id="cmbItemCode" labelFloat="true" layoutX="47.0" layoutY="151.0" prefHeight="39.0" prefWidth="256.0" promptText="Item Code :" styleClass="combo" />
+        <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="351.0" layoutY="151.0" prefHeight="39.0" prefWidth="339.0" promptText="Discription :">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="47.0" layoutY="214.0" prefHeight="39.0" prefWidth="177.0" promptText="Qty On Hand">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="263.0" layoutY="214.0" prefHeight="39.0" prefWidth="197.0" promptText="Unit Price">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXTextField>
+        <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="903.0" layoutY="31.0" prefHeight="27.0" prefWidth="129.0" text="2022-05-16">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblCart" layoutX="35.0" layoutY="282.0" prefHeight="252.0" prefWidth="1051.0">
+            <columns>
+                <TableColumn prefWidth="98.0" text="Code" />
+                <TableColumn prefWidth="100.0" text="Description" />
+                <TableColumn prefWidth="112.0" text="Package Size" />
+                <TableColumn prefWidth="134.0" text="Unit Price" />
+                <TableColumn prefWidth="126.0" text="Qty" />
+                <TableColumn prefWidth="126.0" text="Discount" />
+                <TableColumn prefWidth="126.0" text="Total" />
+            <TableColumn prefWidth="126.0" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Label layoutX="57.0" layoutY="548.0" text="TOTAL : " textFill="#f50b0b">
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label fx:id="lblOrderId" alignment="CENTER_RIGHT" layoutX="533.0" layoutY="30.0" prefHeight="30.0" prefWidth="167.0" text=" OD001" textFill="#f20c0c">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <JFXTextField fx:id="txtPackageSize" labelFloat="true" layoutX="493.0" layoutY="214.0" prefHeight="39.0" prefWidth="197.0" promptText="Package Size">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXTextField>
+        <Separator layoutX="754.0" layoutY="81.0" orientation="VERTICAL" prefHeight="165.0" prefWidth="6.0" />
+        <JFXButton id="btnAddCart" fx:id="btnAddToCart" layoutX="842.0" layoutY="214.0" onAction="#btnAddToCartOnAction" prefHeight="39.0" prefWidth="150.0" text="Add to Cart">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <TextField fx:id="txtQty" layoutX="820.0" layoutY="90.0" prefHeight="39.0" prefWidth="177.0" promptText="Qty">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="txtDiscount" layoutX="820.0" layoutY="151.0" prefHeight="39.0" prefWidth="177.0" promptText="Discount %">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </TextField>
+        <Separator layoutX="45.0" layoutY="270.0" prefHeight="0.0" prefWidth="1031.0" />
+      <JFXComboBox fx:id="cmbCustomerId" labelFloat="true" layoutX="47.0" layoutY="81.0" prefHeight="39.0" prefWidth="256.0" promptText="Customer ID ;" styleClass="combo" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="351.0" layoutY="81.0" prefHeight="39.0" prefWidth="339.0" promptText="Customer Name ;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblTotal" layoutX="169.0" layoutY="548.0" text=" 0.00" textFill="#f50b0b">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" alignment="CENTER_RIGHT" layoutX="754.0" layoutY="30.0" prefHeight="30.0" prefWidth="129.0" text="23:23:44">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="522.0" layoutY="30.0" prefHeight="30.0" prefWidth="95.0" text="Order ID :" textFill="#fc0a0a">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnAddCart" fx:id="btnPlaceOrder" layoutX="893.0" layoutY="548.0" onAction="#btnPlaceOrderOnAction" prefHeight="40.0" prefWidth="177.0" text="Place order">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>
